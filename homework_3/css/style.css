@@ -1,0 +1,43 @@
+/* task 1 */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* task 2 */
+.box {
+  height: 220px;
+  width: 350px;
+  padding: 15px 10px 20px;
+  margin-bottom: 30px;
+  border: 2px dashed red;
+  background: green;
+}
+
+/* task 3 */
+.clearfix:after { 
+  content: " ";
+  display: table;
+  clear: both;
+}
+.float-box {
+  width: 50%;
+}
+.float-box p {
+  text-align: justify;
+}
+.float-left {
+  float: left;
+  margin: 0 15px 15px 0;
+  width: 200px;
+}
+.float-right {
+  float: right;
+  margin: 15px 0 10px 15px;
+  width: 150px;
+}

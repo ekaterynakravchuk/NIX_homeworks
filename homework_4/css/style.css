@@ -1,0 +1,201 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    color: #fff;
+}
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+/* task 1 */
+.cardbox {
+    position: relative;
+    max-width: 600px;
+    background: #0d5825;
+    padding: 10px;
+    text-align: center;
+}
+.cardbox_blockquote {
+    quotes: "“" "”";
+    font-size: 25px;
+    margin-bottom: 150px
+}
+.cardbox_blockquote b::before {
+    content: open-quote;
+}
+.cardbox_blockquote b::after {
+    content: close-quote;
+}
+.cardbox_images {
+    width: 100%;
+    margin-bottom: 70px;
+}
+.cardbox_image-1,
+.cardbox_image-2,
+.cardbox_image-3 {
+    position: relative;
+    width: 150px;
+    transition: all .5s;
+}
+.cardbox_image-1 {
+    transform: rotate(-25deg);
+    left: 100px;
+    bottom: 0;
+}
+.cardbox_image-2 {
+    transform: rotate(-10deg);
+    bottom: -5px;
+}
+.cardbox_image-3 {
+    transform: rotate(10deg);
+    right: 100px;
+    bottom: -25px;
+}
+.cardbox_image-1:hover,
+.cardbox_image-2:hover,
+.cardbox_image-3:hover {
+    cursor: pointer;
+    bottom: 30px;
+}
+/* task 2 */
+.box-wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 30px;
+}
+.box-1, .box-2, .box-3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.box-1 {
+    background: pink;
+    left: 30px;
+    top: 30px;
+}
+.box-2 {
+    background: lightskyblue;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.box-3 {
+    background: springgreen;
+    right: 30px;
+    bottom: 30px;
+}
+/* task 3 */
+.slide-menu {
+    min-height: 70vh;
+    width: 350px;
+    position: relative;
+    font-size: 25px;
+    font-family: "Times New Roman", serif;
+    text-transform: uppercase;
+}
+.menu-bar {
+    position: absolute;
+    left: -315px;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    padding: 20px;
+    transition: all .5s;
+}
+.menu-bar:hover {
+    left: 0;
+}
+.menu_list {
+    list-style: none;
+    margin-bottom: 200px;
+}
+.menu_item {
+    position: relative;
+    margin: 10px 0;
+}
+.menu_item::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 7px;
+    left: -25px;
+    background: darkgoldenrod;
+    border: 1px solid #000;
+    transform: rotate(-45deg);
+}
+.menu_link {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+.menu_link:hover {
+    color: darkgoldenrod;
+}
+.menu_lable {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    cursor: pointer;
+    transform: rotate(90deg) translateY(-50%);
+    opacity: 1;
+    transition: opacity .3s;
+}
+.menu-bar:hover .menu_lable{
+    opacity: 0;
+}
+
+
+
+
+/* task 4 */
+@keyframes slide-box {
+    0% {
+        top: 0;
+        left: 0;
+        background: red;
+    }
+    25% {
+        top: calc(100% - 100px);
+        left: 0;
+        background: blue;
+    }
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background: green; 
+    }
+    75% {
+        top: 0;
+        left: calc(100% - 100px);
+        background: yellow;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background: red;
+    }
+}
+.box-wrap {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.holder {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    animation: slide-box 5s infinite;
+}

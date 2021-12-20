@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* task 1 */
+blockquote {
+  color: green;
+}
+
+/* task 2 */
+a[href^='https'] {
+  color: red;
+}
+
+.list > li:last-child a {
+  background-color: green;
+}
+
+.list + p {
+  font-size: 26px;
+}
+
+/* task 3 */
+.text-box h3:first-child {
+  color: pink;
+}
+
+#greycol {
+  color: gray;
+}
+
+.text-box div p {
+  color: red;
+}
+
+.text-box p:nth-child(7) {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+/* task 4 */
+.bg-box {
+  min-height: 100vh;
+  background: url(../img/house.jpg) center center no-repeat,
+              url(../img/lamp.png) left top / 100px 150px repeat-x,
+              url(../img/grass.png) left bottom / 350px 350px repeat-x,
+              url(../img/hedgehog.png) left / 50px 50px repeat-y,
+              url(../img/donat.png) right / 50px 50px repeat-y;
+  background-color: green;
+}
